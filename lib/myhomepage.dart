@@ -30,17 +30,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 controller: inputNama,
                 onSubmitted: (values) {
                   inputNama.text = values;
-                }
+                },
 
-              )
+              ),
 
 
-            )
-          )
+            ),
+          ),
         
-          ,
           ElevatedButton(
-            child: Text('Tampilkan Nama'),
+            child: Text('Tampilkan Username'),
             onPressed: () {
               print(inputNama.text);
 
