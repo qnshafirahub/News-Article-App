@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
               child: TextFormField(
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 216, 206, 163),
-                  hintText: 'Masukan ',
+                  hintText: 'Masukkan Username',
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(40)),
@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
             child: TextFormField(
               decoration: InputDecoration(
                 fillColor: const Color.fromARGB(255, 216, 206, 163),
-                hintText: 'Masukan Password',
+                hintText: 'Masukkan Password',
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(40)),
