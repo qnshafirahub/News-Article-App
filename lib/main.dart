@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
               child: TextFormField(
                 decoration: InputDecoration(
                   fillColor: const Color.fromARGB(255, 185, 164, 131),
-                  hintText: 'Masukan Nama Kamu',
+                  hintText: 'Masukan Username',
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
