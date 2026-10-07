@@ -25,12 +25,18 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Color.fromARGB(0, 50, 145, 145),
       ),
 
-      
-
       backgroundColor: Color.fromARGB(245, 237, 240, 238),
 
       body: Column(
         children: [
+          Center(
+            child: Image(
+              image: AssetImage('asset/my.jpg'),
+              width: 200,
+              height: 200,
+            ),
+          ),
+
           Center(
             child: Container(
               width: 300,
