@@ -19,24 +19,15 @@ class _LoginPageState extends State<LoginPage> {
 
       body: Column(
         children: [
-
           // Logo dan nama aplikasi
           Padding(
-            padding: const EdgeInsets.only(
-              top: 80,
-              left: 40,
-              right: 40,
-            ),
+            padding: const EdgeInsets.only(top: 80, left: 40, right: 40),
 
             child: Column(
               children: [
                 Row(
                   children: [
-                    Icon(
-                      Icons.language,
-                      size: 70,
-                      color: Colors.white,
-                    ),
+                    Icon(Icons.language, size: 70, color: Colors.white),
 
                     const SizedBox(width: 20),
 
@@ -53,10 +44,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 const SizedBox(height: 30),
 
-                Container(
-                  height: 2,
-                  color: Colors.grey,
-                ),
+                Container(height: 2, color: Colors.grey),
               ],
             ),
           ),
@@ -75,7 +63,6 @@ class _LoginPageState extends State<LoginPage> {
 
             child: Column(
               children: [
-
                 // Username
                 TextField(
                   controller: inputUsername,
@@ -105,10 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                     filled: true,
                     fillColor: Colors.white,
 
-                    suffixIcon: const Icon(
-                      Icons.lock,
-                      color: Colors.blueGrey,
-                    ),
+                    suffixIcon: const Icon(Icons.lock, color: Colors.blueGrey),
 
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -129,10 +113,8 @@ class _LoginPageState extends State<LoginPage> {
 
             child: ElevatedButton(
               onPressed: () {
-
                 print('Username: ${inputUsername.text}');
                 print('Password: ${inputPassword.text}');
-
               },
 
               style: ElevatedButton.styleFrom(
@@ -148,10 +130,7 @@ class _LoginPageState extends State<LoginPage> {
 
               child: const Text(
                 'Continue',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
           ),
