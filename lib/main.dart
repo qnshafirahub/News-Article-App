@@ -1,37 +1,162 @@
 import 'package:flutter/material.dart';
-import 'package:news_article_app/myhomepage.dart';
 
-void main() {
-  runApp(const MyApp());
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class _LoginPageState extends State<LoginPage> {
+  // Controller untuk username dan password
+  TextEditingController inputUsername = TextEditingController();
+  TextEditingController inputPassword = TextEditingController();
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+    return Scaffold(
+      backgroundColor: Colors.white,
+
+      body: Column(
+        children: [
+
+          // Logo dan nama aplikasi
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 80,
+              left: 40,
+              right: 40,
+            ),
+
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.language,
+                      size: 70,
+                      color: Colors.white,
+                    ),
+
+                    const SizedBox(width: 20),
+
+                    const Text(
+                      'News\nApp',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 30),
+
+                Container(
+                  height: 2,
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 35),
+
+          // Kotak login
+          Container(
+            width: 330,
+            padding: const EdgeInsets.all(25),
+
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(30),
+            ),
+
+            child: Column(
+              children: [
+
+                // Username
+                TextField(
+                  controller: inputUsername,
+
+                  decoration: InputDecoration(
+                    hintText: 'username:',
+                    filled: true,
+                    fillColor: Colors.white,
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
+                // Password
+                TextField(
+                  controller: inputPassword,
+
+                  obscureText: true,
+
+                  decoration: InputDecoration(
+                    hintText: 'password:',
+                    filled: true,
+                    fillColor: Colors.white,
+
+                    suffixIcon: const Icon(
+                      Icons.lock,
+                      color: Colors.blueGrey,
+                    ),
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 45),
+
+          // Tombol Continue
+          SizedBox(
+            width: 260,
+            height: 60,
+
+            child: ElevatedButton(
+              onPressed: () {
+
+                print('Username: ${inputUsername.text}');
+                print('Password: ${inputPassword.text}');
+
+              },
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.grey,
+
+                elevation: 2,
+
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+
+              child: const Text(
+                'Continue',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
-      home: const MyHomePage(),
     );
   }
 }
