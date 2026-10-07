@@ -1,97 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:news_article_app/loginpage.dart';
+import 'loginpage.dart';
+import 'myhomepage.dart';
+
 void main() {
-  runApp(const MaterialApp(
-    home: LoginPage(),
-  ));
+  runApp(const MyApp());
 }
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
-
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  TextEditingController inputNama = TextEditingController();
-  TextEditingController inputPassword = TextEditingController();
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("News App"),
-        backgroundColor: Color.fromARGB(255, 250, 247, 247),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
 
-      backgroundColor: Color.fromARGB(245, 243, 242, 234),
-
-      body: Column(
-        children: [
-          Center(
-            child: Container(
-              width: 300,
-              child: TextFormField(
-                decoration: InputDecoration(
-                  fillColor: const Color.fromARGB(255, 92, 97, 126),
-                  hintText: 'Masukan Username',
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(40),
-                    ),
-                  ),
-                ),
-
-                controller: inputNama,
-
-                onFieldSubmitted: (values) {
-                  inputNama.text = values;
-                },
-              ),
-            ),
-          ),
-
-          Padding(
-            padding: EdgeInsets.all(16),
-          ),
-
-          Container(
-            width: 300,
-            child: TextFormField(
-              decoration: InputDecoration(
-                fillColor: const Color.fromARGB(255, 92, 97, 126),
-                hintText: 'Masukan Password',
-                filled: true,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(40),
-                  ),
-                ),
-              ),
-
-              controller: inputPassword,
-
-              onFieldSubmitted: (values) {
-                inputPassword.text = values;
-              },
-            ),
-          ),
-
-          Padding(
-            padding: EdgeInsets.all(16),
-          ),
-
-          ElevatedButton(
-            child: Text("Login"),
-            onPressed: () {
-              print(inputNama.text);
-              print(inputPassword.text);
-            },
-          ),
-        ],
-      ),
+      // Halaman pertama adalah Login
+      home: const LoginPage(),
     );
   }
 }
