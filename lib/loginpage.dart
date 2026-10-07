@@ -84,9 +84,15 @@ class _LoginPageState extends State<LoginPage> {
           ElevatedButton(
             child: Text("Login"),
             onPressed: () {
-              print(inputNama.text);
-              print(inputPassword.text);
-              Navigator.pushReplacementNamed(context, '/home');
+              if (inputNama.text.isEmpty || inputPassword.text.isEmpty) {
+                return;
+              }
+
+              // Username dan password benar
+
+              if (inputNama.text == "admin" && inputPassword.text == "12345") {
+                Navigator.pushReplacementNamed(context, '/home');
+              }
             },
           ),
         ],
