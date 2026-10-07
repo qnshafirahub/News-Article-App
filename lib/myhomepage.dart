@@ -11,6 +11,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("News ArticleApp")));
+      appBar: AppBar(title: Text("News Article App")),
+      backgroundColor: Color.fromARGB(218, 214, 197, 100)
+    );
+  
   }
 }
