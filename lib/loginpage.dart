@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: LoginPage(),
-  ));
+  runApp(const MaterialApp(home: LoginPage()));
 }
 
 class LoginPage extends StatefulWidget {
@@ -31,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           Center(
             child: Image(
-              image: AssetImage('asset/buatlogin.jpg'),
+              image: AssetImage('asset/buatlogin.png'),
               width: 100,
               height: 100,
             ),
@@ -46,9 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: 'Masukan ',
                   filled: true,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(40),
-                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(40)),
                   ),
                 ),
 
@@ -61,9 +57,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          Padding(
-            padding: EdgeInsets.all(16),
-          ),
+          Padding(padding: EdgeInsets.all(16)),
 
           Container(
             width: 300,
@@ -73,9 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: 'Masukan Password',
                 filled: true,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(40),
-                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
                 ),
               ),
 
@@ -87,9 +79,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          Padding(
-            padding: EdgeInsets.all(16),
-          ),
+          Padding(padding: EdgeInsets.all(16)),
 
           ElevatedButton(
             child: Text("Login"),
