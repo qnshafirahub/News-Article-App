@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_article_app/myhomepage.dart';
 import 'loginpage.dart';
 
 void main() {
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       // Halaman pertama adalah Login
-      home: const LoginPage(),
+      //home: const LoginPage(),
+      routes: {
+        "/": (context) => const LoginPage(),
+        "/home":(context) => const MyHomePage(),
+        
+      },
       
     );
   }
