@@ -20,7 +20,6 @@ class _MyHomePageState extends State<MyHomePage> {
           Center(
             child: Container(
               width: 200,
-              height: 200,
               color: Color.fromARGB(218, 244, 235, 183),
               child: TextField(
                 decoration: InputDecoration(
