@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("News App"),
-        backgroundColor: Color.fromARGB(0, 50, 145, 145),
+        backgroundColor: Color.fromARGB(255, 250, 247, 247),
       ),
 
       backgroundColor: Color.fromARGB(245, 243, 242, 234),
